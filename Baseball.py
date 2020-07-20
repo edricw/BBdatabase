@@ -10,8 +10,9 @@ from dash.dependencies import Input, Output
 
 bStats = pd.read_csv('./assets/BattingWar.csv')
 draft = pd.read_csv('./assets/Draft.csv')
-salaries = pd.read_csv('./assets/Salaries.csv')
 teams = pd.read_csv('./assets/Teams.csv')
+salaries = pd.read_csv('./assets/Salaries.csv')
+salaries = pd.merge(salaries, teams, on = ['yearID','teamID'], how = 'left')
 position = pd.read_csv('./assets/Fielding.csv')
 pitching= pd.read_csv('./assets/PitchingWar.csv')
 
@@ -33,7 +34,8 @@ PitchProll = PitchProll[['name_common','playerID','yearID','teamID','age','WAR',
 proll = pd.merge(BatProll,PitchProll, how = 'outer')
 proll = proll[(proll['yearID'] >= 1995) & (proll['yearID'] <= 2016)]
 proll = proll.drop_duplicates()
-
+proll = pd.merge(proll, teams, on = ['teamID','yearID'])
+proll = proll[['name_common','playerID','yearID','teamIDBR','age','WAR','salary']]
 
 
 #get non null salries
@@ -52,9 +54,9 @@ final = final.dropna(axis=0, subset=['name_common']).reset_index(drop = True)
 
 #payrollvsWins
 sal = salaries[(salaries['yearID'] >= 1995) & (salaries['yearID'] <= 2016)]
-teamyeargroup = sal.groupby(['yearID','teamID']).salary.sum().reset_index()
-salaryWL = pd.merge(teamyeargroup,teams, on = ['teamID','yearID'], how = 'inner')
-#print(salaryWL[['yearID','teamID','salary','W','L']])
+teamyeargroup = sal.groupby(['yearID','teamIDBR']).salary.sum().reset_index()
+salaryWL = pd.merge(teamyeargroup,teams, on = ['teamIDBR','yearID'], how = 'inner')
+print(salaryWL[['yearID','teamIDBR','salary','W','L']])
 
 
 
@@ -62,7 +64,7 @@ external_stylesheets = []
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
-team = sorted(final.teamID.unique())
+team = sorted(final.teamIDBR.unique())
 year_id = sorted(final.yearID.unique())
 app.layout = html.Div(children = [html.H1(children = "Welcome to the Baseball Stat Sheet!"),
     html.Div(children ='WAR by Player Salary', style = {'fontSize': 30}),
@@ -84,9 +86,9 @@ app.layout = html.Div(children = [html.H1(children = "Welcome to the Baseball St
     Output('graph', 'figure'),
     [Input('year', 'value'),
      Input('team', 'value')])
-def update_figure(selected_year, teamID):
+def update_figure(selected_year, teamIDBR):
     final_df = final[final.yearID == selected_year]
-    final_df = final_df[final_df.teamID == teamID]
+    final_df = final_df[final_df.teamIDBR == teamIDBR]
     fig = px.scatter(final_df, x="salary", y="WAR", hover_data= ['salary','WAR','name_common'],
                      trendline = 'ols', color = 'WAR')
     return fig
@@ -97,7 +99,7 @@ def update_figure(selected_year, teamID):
 def update_graph(year):
     import plotly.express as px
     return px.scatter(salaryWL[salaryWL.yearID == year], x = 'salary', y = 'W', trendline='ols',
-                      hover_data= ['salary','W','teamID'],
+                      hover_data= ['salary','W','teamIDBR'],
                       size = 'salary', color = 'W',
                       labels = {
                           'salary':'Payroll', 'W':'Wins'
