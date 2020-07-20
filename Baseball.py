@@ -8,12 +8,12 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 
-bStats = pd.read_csv('../baseballstats27/BattingWar.csv')
-draft = pd.read_csv('../baseballstats27/draft.csv')
-salaries = pd.read_csv('../baseballstats27/Salaries.csv')
-teams = pd.read_csv('../baseballstats27/Teams.csv')
-position = pd.read_csv('../baseballstats27/Fielding.csv')
-pitching= pd.read_csv('../baseballstats27/PitchingWar.csv')
+bStats = pd.read_csv('./Static/BattingWar.csv')
+draft = pd.read_csv('./Static/draft.csv')
+salaries = pd.read_csv('./Static/Salaries.csv')
+teams = pd.read_csv('./Static/Teams.csv')
+position = pd.read_csv('./Static/Fielding.csv')
+pitching= pd.read_csv('./Static/PitchingWar.csv')
 
 
 
@@ -58,9 +58,9 @@ salaryWL = pd.merge(teamyeargroup,teams, on = ['teamID','yearID'], how = 'inner'
 
 
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = []
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, static_folder = 'Static')
 server = app.server
 team = sorted(final.teamID.unique())
 year_id = sorted(final.yearID.unique())
