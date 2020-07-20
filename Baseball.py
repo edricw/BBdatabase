@@ -9,7 +9,7 @@ from dash.dependencies import Input, Output
 
 
 bStats = pd.read_csv('./assets/BattingWar.csv')
-draft = pd.read_csv('./assets/draft.csv')
+draft = pd.read_csv('./assets/Draft.csv')
 salaries = pd.read_csv('./assets/Salaries.csv')
 teams = pd.read_csv('./assets/Teams.csv')
 position = pd.read_csv('./assets/Fielding.csv')
