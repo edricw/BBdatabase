@@ -4,6 +4,18 @@
     <list default="true" id="bbeb3684-298f-4069-b349-e0b802e9b759" name="Default Changelist" comment="yeet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Baseball.py" beforeDir="false" afterPath="$PROJECT_DIR$/Baseball.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/Batting.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Batting.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/BattingWar.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/BattingWar.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/Draft.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Draft.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/Fielding.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Fielding.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/People.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/People.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/Pitching.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Pitching.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/PitchingWar.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/PitchingWar.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/Position.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Position.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/Salaries.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Salaries.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/Schools.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Schools.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/Teams.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Teams.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static/TeamsFranchises.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/TeamsFranchises.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Baseball.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="86" selection-start-line="62" selection-start-column="86" selection-end-line="62" selection-end-column="86" />
+            <state relative-caret-position="225">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -74,6 +86,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Static" />
       <recent name="$PROJECT_DIR$/venv" />
     </key>
   </component>
@@ -128,18 +141,18 @@
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1864139" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1864139" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32953367" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32953367" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3299363" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -178,8 +191,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Baseball.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="86" selection-start-line="62" selection-start-column="86" selection-end-line="62" selection-end-column="86" />
+        <state relative-caret-position="225">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>

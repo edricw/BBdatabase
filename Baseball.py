@@ -8,12 +8,12 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 
-bStats = pd.read_csv('./Static/BattingWar.csv')
-draft = pd.read_csv('./Static/draft.csv')
-salaries = pd.read_csv('./Static/Salaries.csv')
-teams = pd.read_csv('./Static/Teams.csv')
-position = pd.read_csv('./Static/Fielding.csv')
-pitching= pd.read_csv('./Static/PitchingWar.csv')
+bStats = pd.read_csv('./assets/BattingWar.csv')
+draft = pd.read_csv('./assets/draft.csv')
+salaries = pd.read_csv('./assets/Salaries.csv')
+teams = pd.read_csv('./assets/Teams.csv')
+position = pd.read_csv('./assets/Fielding.csv')
+pitching= pd.read_csv('./assets/PitchingWar.csv')
 
 
 
@@ -60,7 +60,7 @@ salaryWL = pd.merge(teamyeargroup,teams, on = ['teamID','yearID'], how = 'inner'
 
 external_stylesheets = []
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets, static_folder = 'Static')
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 team = sorted(final.teamID.unique())
 year_id = sorted(final.yearID.unique())
