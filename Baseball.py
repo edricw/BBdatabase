@@ -9,12 +9,16 @@ from dash.dependencies import Input, Output
 
 
 bStats = pd.read_csv('./assets/BattingWar.csv')
-draft = pd.read_csv('./assets/Draft.csv')
+people = pd.read_csv('./assets/People.csv')
 teams = pd.read_csv('./assets/Teams.csv')
 salaries = pd.read_csv('./assets/Salaries.csv')
 salaries = pd.merge(salaries, teams, on = ['yearID','teamID'], how = 'left')
 position = pd.read_csv('./assets/Fielding.csv')
 pitching= pd.read_csv('./assets/PitchingWar.csv')
+transactions = pd.read_csv('./assets/Transactions.csv')
+
+
+
 
 
 
@@ -37,6 +41,28 @@ proll = proll.drop_duplicates()
 proll = pd.merge(proll, teams, on = ['teamID','yearID'])
 proll = proll[['name_common','playerID','yearID','teamIDBR','age','WAR','salary']]
 
+#AVG WAR
+avgWAR = proll.groupby(['playerID']).WAR.sum().reset_index()
+
+#Trasaction/Draft
+#changing teams
+transactions = pd.merge(transactions, teams, on = ['yearID', 'teamIDretro'], how = 'left')
+transactions = pd.merge(transactions, people, on = ['retroID'], how = 'left')
+transactions = transactions[['yearID','playerID','teamIDBR','to-league8','type','draft-round','pick-number10']]
+transactions = transactions[transactions.type.isin(["Dv", "D","Da","Df","Dm"])]
+transactions = transactions[(transactions['yearID'] >= 1985) & (transactions['yearID'] <= 2019)]
+transactions = pd.merge(transactions,avgWAR, on= ['playerID'], how = 'left')
+transactions = transactions[['yearID','playerID','teamIDBR','WAR','draft-round','pick-number10']]
+transactions = transactions.dropna(axis=0, subset=['draft-round','WAR']).reset_index(drop = True)
+#print(transactions)
+
+
+#WarbyYear
+yearWAR = transactions.groupby(['yearID']).WAR.sum().reset_index()
+fig = px.bar(yearWAR, x="yearID", y="WAR", hover_data= ['WAR','yearID'], text = 'yearID', color = 'WAR', labels = {
+                          'yearID':'Year', 'WAR':'WAR'
+                      })
+#fig.show()
 
 #get non null salries
 bool_series1 = pd.notnull(proll["salary"])
@@ -56,7 +82,6 @@ final = final.dropna(axis=0, subset=['name_common']).reset_index(drop = True)
 sal = salaries[(salaries['yearID'] >= 1995) & (salaries['yearID'] <= 2016)]
 teamyeargroup = sal.groupby(['yearID','teamIDBR']).salary.sum().reset_index()
 salaryWL = pd.merge(teamyeargroup,teams, on = ['teamIDBR','yearID'], how = 'inner')
-print(salaryWL[['yearID','teamIDBR','salary','W','L']])
 
 
 
@@ -79,7 +104,9 @@ app.layout = html.Div(children = [html.H1(children = "Welcome to the Baseball St
     html.Label('Year'),
     dcc.Dropdown(id='year2', options=[{'label': i, 'value': i} for i in year_id],
                  value='1995', style={'width': '300px'}),
-    dcc.Graph(id ='random_graph')])
+    dcc.Graph(id ='random_graph'),
+    html.Div(children = 'WAR by Draft Year', style = {'fontSize': 30}),
+    dcc.Graph(id = 'draftWar', figure = fig)])
 
 
 @app.callback(
@@ -108,7 +135,3 @@ def update_graph(year):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-
-
-
-
