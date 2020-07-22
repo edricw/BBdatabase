@@ -86,7 +86,7 @@ salaryWL = pd.merge(teamyeargroup,teams, on = ['teamIDBR','yearID'], how = 'inne
 team = sorted(final.teamIDBR.unique())
 year_id = sorted(final.yearID.unique())
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = ['http://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div([html.H1(children = "Welcome to the Baseball Stat Sheet!"),
