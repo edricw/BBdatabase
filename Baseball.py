@@ -23,7 +23,7 @@ transactions = pd.read_csv('./assets/Transactions.csv')
 
 #WAR BY PAYROLL
 
-#Merging Batting Stats with Position
+#Merging Batting Stats with Position￿ˀ
 BatProll = pd.merge(bStats, position, on = ['teamID','yearID','playerID'], how = 'outer')
 #Removing all pitchers
 BatProll = BatProll[BatProll.POS != 'P']
@@ -106,6 +106,8 @@ app.layout = html.Div([html.H1(children = "Welcome to the Baseball Stat Sheet!")
             html.Label('Year'),
             dcc.Dropdown(id='year2', options=[{'label': i, 'value': i} for i in year_id],
                  value='1995', style={'width': '300px', 'display': 'inline-block'}),
+            html.Br(),
+            html.Br(),
             html.Br(),
             html.Br(),
             dcc.Graph(id = 'random_graph', style = {'display': 'inline-block'})
