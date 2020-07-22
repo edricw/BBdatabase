@@ -1,4 +1,3 @@
-
 import plotly.express as px
 import pandas as pd
 import numpy as np
@@ -84,29 +83,37 @@ teamyeargroup = sal.groupby(['yearID','teamIDBR']).salary.sum().reset_index()
 salaryWL = pd.merge(teamyeargroup,teams, on = ['teamIDBR','yearID'], how = 'inner')
 
 
-
-external_stylesheets = []
-
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-server = app.server
 team = sorted(final.teamIDBR.unique())
 year_id = sorted(final.yearID.unique())
-app.layout = html.Div(children = [html.H1(children = "Welcome to the Baseball Stat Sheet!"),
-    html.Div(children ='WAR by Player Salary', style = {'fontSize': 30}),
-    html.Label('Year'),
-    dcc.Dropdown(id='year', options=[{'label': i, 'value': i} for i in year_id],
-                 value ='1995', style={'width': '300px'}),
-    html.Label('Team'),
-    dcc.Dropdown(id='team', options=[{'label': i, 'value': i} for i in team],
-                 value = 'SFN', style={'width': '300px'}),
-    dcc.Graph(id='graph'),
-    html.Div(children ='Wins by Payroll ', style = {'fontSize': 30}),
-    html.Label('Year'),
-    dcc.Dropdown(id='year2', options=[{'label': i, 'value': i} for i in year_id],
-                 value='1995', style={'width': '300px'}),
-    dcc.Graph(id ='random_graph'),
-    html.Div(children = 'WAR by Draft Year', style = {'fontSize': 30}),
-    dcc.Graph(id = 'draftWar', figure = fig)])
+
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+app.layout = html.Div([html.H1(children = "Welcome to the Baseball Stat Sheet!"),
+    html.Div([
+        html.Div([
+            html.H3(children ='WAR by Player Salary', style = {'fontSize': 30, 'display': 'inline-block'}),
+            html.Label('Year'),
+            dcc.Dropdown(id='year', options=[{'label': i, 'value': i} for i in year_id],
+                 value ='1995', style={'width': '300px', 'display': 'inline-block'}),
+            html.Label('Team'),
+            dcc.Dropdown(id='team', options=[{'label': i, 'value': i} for i in team],
+                         value='SFN', style={'width': '300px', 'display': 'inline-block'}),
+            dcc.Graph(id='graph', style = {'display': 'inline-block'})
+        ], className="six columns"),
+        html.Div([
+            html.H3(children ='Wins by Payroll ', style = {'fontSize': 30, 'display': 'inline-block'}),
+            html.Label('Year'),
+            dcc.Dropdown(id='year2', options=[{'label': i, 'value': i} for i in year_id],
+                 value='1995', style={'width': '300px', 'display': 'inline-block'}),
+            html.Br(),
+            html.Br(),
+            dcc.Graph(id = 'random_graph', style = {'display': 'inline-block'})
+        ], className="six columns"),
+    ], className="row"),
+                       html.Div(children='WAR by Draft Year', style={'fontSize': 30}),
+                       dcc.Graph(id='draftWar', figure=fig)])
+
 
 
 @app.callback(
@@ -135,3 +142,5 @@ def update_graph(year):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+
+
