@@ -90,31 +90,38 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
-app.layout = html.Div([html.H1(children = "Welcome to the Baseball Stat Sheet!"),
-    html.Div([
+app.layout = html.Div(
+    [html.H1(children = "Welcome to the Baseball Stat Sheet!", style = {'textAlign': 'center'}),html.Div([
         html.Div([
-            html.H3(children ='WAR by Player Salary', style = {'fontSize': 30, 'display': 'inline-block'}),
-            html.Label('Year'),
+            html.H3(children ='WAR by Player Salary', style = {'fontSize': 30, 'textAlign': 'center'}),
+            html.Label('Year',style = {'textAlign': 'center'}),
             dcc.Dropdown(id='year', options=[{'label': i, 'value': i} for i in year_id],
-                 value ='1995', style={'width': '300px', 'display': 'inline-block'}),
-            html.Label('Team'),
+                 value ='1995', style={
+              'textAlign':'center',
+              'width': '300px',
+              'margin':'auto'}),
+            html.Label('Team',style = {'textAlign': 'center'}),
             dcc.Dropdown(id='team', options=[{'label': i, 'value': i} for i in team],
-                         value='SFN', style={'width': '300px', 'display': 'inline-block'}),
-            dcc.Graph(id='graph', style = {'display': 'inline-block'})
+                         value='SFN', style={
+              'textAlign':'center',
+              'width': '300px',
+              'margin':'auto'}),
+            dcc.Graph(id='graph', style = {'display': 'inline-block', 'height':'850', 'width':"700px"})
         ], className="six columns"),
         html.Div([
-            html.H3(children ='Wins by Payroll ', style = {'fontSize': 30, 'display': 'inline-block'}),
-            html.Label('Year'),
+            html.H3(children ='Wins by Payroll ', style = {'fontSize': 30, 'textAlign': 'center'}),
+            html.Br(),
+            html.Label('Year',style = {'textAlign': 'center'}),
             dcc.Dropdown(id='year2', options=[{'label': i, 'value': i} for i in year_id],
-                 value='1995', style={'width': '300px', 'display': 'inline-block'}),
+                 value='1995', style={
+              'textAlign':'center',
+              'width': '300px',
+              'margin':'auto'}),
             html.Br(),
-            html.Br(),
-            html.Br(),
-            html.Br(),
-            dcc.Graph(id = 'random_graph', style = {'display': 'inline-block'})
+            dcc.Graph(id = 'random_graph', style = {'display': 'inline-block','height':'850', 'width':"700px"})
         ], className="six columns"),
     ], className="row"),
-                       html.Div(children='WAR by Draft Year', style={'fontSize': 30}),
+                       html.Div(children='WAR by Draft Year', style={'fontSize': 30, 'textAlign': 'center'}),
                        dcc.Graph(id='draftWar', figure=fig)])
 
 
@@ -127,7 +134,9 @@ def update_figure(selected_year, teamIDBR):
     final_df = final[final.yearID == selected_year]
     final_df = final_df[final_df.teamIDBR == teamIDBR]
     fig = px.scatter(final_df, x="salary", y="WAR", hover_data= ['salary','WAR','name_common'],
-                     trendline = 'ols', color = 'WAR')
+                     trendline = 'ols', color = 'WAR',
+                     labels={
+                         'salary': 'Salary'})
     return fig
 @app.callback(
     Output('random_graph', 'figure'),
