@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbeb3684-298f-4069-b349-e0b802e9b759" name="Default Changelist" comment="yeet">
+      <change afterPath="$PROJECT_DIR$/Example.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/baseballstats27.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/baseballstats27.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Baseball.py" beforeDir="false" afterPath="$PROJECT_DIR$/Baseball.py" afterDir="false" />
@@ -20,7 +21,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Baseball.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
+            <state relative-caret-position="333">
               <caret line="237" column="87" selection-start-line="237" selection-start-column="87" selection-end-line="237" selection-end-column="87" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -160,20 +161,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1920" height="1057" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.12684989" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24947146" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32980973" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49753347" visible="true" weight="0.1865285" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49753347" weight="0.1865285" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3284974" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32866243" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3284974" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3284974" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5024665" side_tool="true" weight="0.22929937" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32953367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -284,7 +284,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Baseball.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
+        <state relative-caret-position="333">
           <caret line="237" column="87" selection-start-line="237" selection-start-column="87" selection-end-line="237" selection-end-column="87" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
