@@ -16,7 +16,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Baseball.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1133">
+            <state relative-caret-position="-1251">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -173,7 +173,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12684989" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24947146" />
@@ -321,7 +320,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Baseball.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1133">
+        <state relative-caret-position="-1251">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
