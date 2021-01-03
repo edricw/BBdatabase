@@ -178,26 +178,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="464" y="305" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1440.877@0.23.1440.877" timestamp="1606015043065" />
-    <state width="1419" height="169" key="GridCell.Tab.0.bottom" timestamp="1609716558136">
+    <state width="1419" height="169" key="GridCell.Tab.0.bottom" timestamp="1609718319562">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1419" height="172" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1606281693713" />
-    <state width="1419" height="169" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1609716558136" />
-    <state width="1419" height="169" key="GridCell.Tab.0.center" timestamp="1609716558134">
+    <state width="1419" height="169" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1609718319562" />
+    <state width="1419" height="169" key="GridCell.Tab.0.center" timestamp="1609718319560">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1419" height="172" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1606281693712" />
-    <state width="1419" height="169" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1609716558134" />
-    <state width="1419" height="169" key="GridCell.Tab.0.left" timestamp="1609716558133">
+    <state width="1419" height="169" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1609718319560" />
+    <state width="1419" height="169" key="GridCell.Tab.0.left" timestamp="1609718319559">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1419" height="172" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1606281693712" />
-    <state width="1419" height="169" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1609716558133" />
-    <state width="1419" height="169" key="GridCell.Tab.0.right" timestamp="1609716558135">
+    <state width="1419" height="169" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1609718319559" />
+    <state width="1419" height="169" key="GridCell.Tab.0.right" timestamp="1609718319561">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1419" height="172" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1606281693713" />
-    <state width="1419" height="169" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1609716558135" />
+    <state width="1419" height="169" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1609718319561" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1606281730660">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -206,10 +206,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1606281649330" />
-    <state x="320" y="199" key="Vcs.Push.Dialog.v2" timestamp="1609717579598">
+    <state x="320" y="199" key="Vcs.Push.Dialog.v2" timestamp="1609718300719">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="320" y="199" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1609717579598" />
+    <state x="320" y="199" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1609718300719" />
+    <state x="473" y="179" key="git4idea.branch.GitSmartOperationDialog" timestamp="1609718133564">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="473" y="179" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.875@0.25.1440.875" timestamp="1609718133564" />
     <state x="369" y="184" width="700" height="530" key="recent.locations.popup" timestamp="1606281625502">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
