@@ -6,15 +6,6 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select>
       <path>
@@ -25,7 +16,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbeb3684-298f-4069-b349-e0b802e9b759" name="Default Changelist" comment="yeet" />
+    <list default="true" id="bbeb3684-298f-4069-b349-e0b802e9b759" name="Default Changelist" comment="yeet">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baseball.py" beforeDir="false" afterPath="$PROJECT_DIR$/Baseball.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611457152878</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changes">
+      <created>1611517916890</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611517916890</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -170,7 +171,8 @@
       <path value="$PROJECT_DIR$/ewongg/ewongg" />
     </ignored-roots>
     <MESSAGE value="yeet" />
-    <option name="LAST_COMMIT_MESSAGE" value="yeet" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="147" key="#Inspections" timestamp="1603691603247">
@@ -194,26 +196,30 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="100" y="125" width="1240" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1611457491318" />
-    <state width="1419" height="169" key="GridCell.Tab.0.bottom" timestamp="1611197918742">
+    <state x="529" y="385" key="Github.CreateGistDialog" timestamp="1611517836589">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="529" y="385" key="Github.CreateGistDialog/0.25.1440.875@0.25.1440.875" timestamp="1611517836589" />
+    <state width="1419" height="169" key="GridCell.Tab.0.bottom" timestamp="1611517920033">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1419" height="172" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1606281693713" />
-    <state width="1419" height="169" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1611197918742" />
-    <state width="1419" height="169" key="GridCell.Tab.0.center" timestamp="1611197918741">
+    <state width="1419" height="169" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1611517920033" />
+    <state width="1419" height="169" key="GridCell.Tab.0.center" timestamp="1611517920033">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1419" height="172" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1606281693712" />
-    <state width="1419" height="169" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1611197918741" />
-    <state width="1419" height="169" key="GridCell.Tab.0.left" timestamp="1611197918740">
+    <state width="1419" height="169" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1611517920033" />
+    <state width="1419" height="169" key="GridCell.Tab.0.left" timestamp="1611517920032">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1419" height="172" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1606281693712" />
-    <state width="1419" height="169" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1611197918740" />
-    <state width="1419" height="169" key="GridCell.Tab.0.right" timestamp="1611197918742">
+    <state width="1419" height="169" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1611517920032" />
+    <state width="1419" height="169" key="GridCell.Tab.0.right" timestamp="1611517920033">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1419" height="172" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1606281693713" />
-    <state width="1419" height="169" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1611197918742" />
+    <state width="1419" height="169" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1611517920033" />
     <state x="498" y="169" key="RollbackChangesDialog" timestamp="1609720612248">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -247,6 +253,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="473" y="179" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.875@0.25.1440.875" timestamp="1609718133564" />
+    <state x="501" y="355" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1611517758473">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="501" y="355" key="git4idea.remote.GitConfigureRemotesDialog/0.25.1440.875@0.25.1440.875" timestamp="1611517758473" />
     <state x="369" y="184" width="700" height="530" key="recent.locations.popup" timestamp="1606281625502">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
